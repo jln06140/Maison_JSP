@@ -1,0 +1,100 @@
+.container{
+    margin-top: 50px;
+}
+
+.banniere
+{
+    background-image: url("../images/banniere.jpg");
+    background-repeat: no-repeat;
+    background-size:100% 400px ;
+    height:300px;
+    width: 100%;
+}
+
+.parallax-container {
+    height: "300px";
+  }
+
+.banniere span
+{
+    
+  
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+.erreurCache
+{
+    display:none;
+    color:red;
+    text-align: center;
+    border:1px red solid;
+}
+
+.erreurAffiche
+{
+    display:block;
+    color:red;
+    text-align: center;
+    border:1px red solid;
+}
+
+.aligner
+{
+    text-align: center;
+}
+
+#menubas li
+{
+    display : inline;
+    
+}
+
+#logo{
+    height:65px;
+}
+/* 
+
+.row .col{
+    margin-top: 40px;
+     border:1px black solid; 
+}
+
+.decalage
+{
+    margin-left: 120px;
+}
+
+button
+{
+    margin:auto;
+}
+
+.bouton
+{
+    text-align: center;
+}
+
+#lesbouttons
+{
+    margin-top:100px;
+}
+
+.icones
+{
+    margin-top:15px !important;
+}
+
+#checkbox1
+{
+    padding-left: 50px !important;
+}
+
+.packselect
+{
+    padding-left: 50px;
+}
+
+ */
