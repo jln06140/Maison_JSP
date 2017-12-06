@@ -11,6 +11,8 @@
 <link type="text/css" rel="stylesheet" href="css/materialize.min.css"
 	media="screen,projection" />
 <link type="text/css" rel="stylesheet" href="style/style.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,10 +20,6 @@
 
 <body>
 	<div class="contenu">
-		<script type="text/javascript"
-			src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<script type="text/javascript" src="js/maison.js"></script>
 
 		<header>
 			<div class="parallax-container">
@@ -55,51 +53,31 @@
 			</div>
 		</nav>
 
+
+
 		<div class="container">
-			<table border=1 class="responsive-table">
-				<thead>
-					<tr>
-						<th>Nom</th>
-						<th>Prenom</th>
-						<th>Email</th>
-						<th>Telephone</th>
-						<th>nombre Personnes</th>
-						<th>nombre Nuitées</th>
-						<th>Options</th>
-						<th>Type Sejour</th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<c:forEach var="reserv" items="${admin.listeReservations}">
-						<tr>
-							<td><c:out value="${reserv.client.nom }"></c:out><td><c:out value="${reserv.client.prenom }"></c:out><td><c:out value="${reserv.client.telephone }"></c:out>
-						
-							<td><c:out value="${reserv.client.email }"></c:out>
-						
-							<td><c:out value="${reserv.nombrePersonnes }"></c:out>
-						
-							<td><c:out value="${reserv.nombreNuitees }"></c:out>
-						
-							<td><c:forEach var="option" items="${$reserv.option }">${option.name }</c:forEach></td>
-							
-							<td><c:out value="${reserv.typeSejour }"></c:out>
-					
-						</tr>
-				</c:forEach>
-			</tbody>	
-
-			</table>
-			<p>
-				<a href="inscription">retour a la page inscription</a>
-		
+			<h5>Voici un recapitulatif de votre reservation : </h5>
+			<p>Nom :</p>
+			<c:out value="${reservation.client.nom }"></c:out>
+			<p>Prenom :</p>
+			<c:out value="${reservation.client.prenom }"></c:out>
+			<p>Email :</p>
+			<c:out value="${reservation.client.email }"></c:out>
+			<p>Telephone :</p>
+			<c:out value="${reservation.client.telephone }"></c:out>
+			<p>Nombre de personnes :</p>
+			<c:out value="${reservation.nombrePersonnes }"></c:out>
+			<p>Nombre de nuits :</p>
+			<c:out value="${reservation.nombreNuitees }"></c:out>
+			<p>Type de sejour :</p>
+			<c:out value="${reservation.typeSejour }"></c:out>
 		</div>
 
 		<footer class="page-footer light-blue darken-1">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12"></div>
-					<div class="col l4 offset-l2 s12">
+					<div class=" col l4 offset-l2 s12">
 						<h5 class="white-text">Reseaux Sociaux</h5>
 						<ul class="valign" id="menubas">
 							<li><a class="grey-text text-lighten-3" href="#!"><img
@@ -117,6 +95,11 @@
 			<div class="footer-copyright"></div>
 		</footer>
 	</div>
+
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/maison.js"></script>
 </body>
 
 </html>

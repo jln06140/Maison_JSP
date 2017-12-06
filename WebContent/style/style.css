@@ -55,46 +55,8 @@
 #logo{
     height:65px;
 }
-/* 
 
-.row .col{
-    margin-top: 40px;
-     border:1px black solid; 
-}
-
-.decalage
+.listeClients
 {
-    margin-left: 120px;
+	border-collapse: collapse;
 }
-
-button
-{
-    margin:auto;
-}
-
-.bouton
-{
-    text-align: center;
-}
-
-#lesbouttons
-{
-    margin-top:100px;
-}
-
-.icones
-{
-    margin-top:15px !important;
-}
-
-#checkbox1
-{
-    padding-left: 50px !important;
-}
-
-.packselect
-{
-    padding-left: 50px;
-}
-
- */

@@ -5,7 +5,7 @@ public enum OptionsSejour {
 	Fumeur ("Fumeur"),
 	Parking ("Parking");
 	
-	private String name = "";
+	private String name ;
 	
 	OptionsSejour(String name) {
 		this.name = name;
@@ -14,4 +14,12 @@ public enum OptionsSejour {
 	public String toString(){
 	    return name;
 	  }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }

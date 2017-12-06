@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,8 +29,8 @@
 				</div>
 			</div>
 			<!-- <div class="banniere row">
-                <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
-        </div> -->
+            <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
+    </div> -->
 		</header>
 		<nav>
 			<div class="nav-wrapper light-blue darken-1">
@@ -55,45 +54,26 @@
 			</div>
 		</nav>
 
-		<div class="container">
-			<table border=1 class="responsive-table">
-				<thead>
-					<tr>
-						<th>Nom</th>
-						<th>Prenom</th>
-						<th>Email</th>
-						<th>Telephone</th>
-						<th>nombre Personnes</th>
-						<th>nombre Nuitées</th>
-						<th>Options</th>
-						<th>Type Sejour</th>
-					</tr>
-				</thead>
 
-				<tbody>
-					<c:forEach var="reserv" items="${admin.listeReservations}">
-						<tr>
-							<td><c:out value="${reserv.client.nom }"></c:out><td><c:out value="${reserv.client.prenom }"></c:out><td><c:out value="${reserv.client.telephone }"></c:out>
-						
-							<td><c:out value="${reserv.client.email }"></c:out>
-						
-							<td><c:out value="${reserv.nombrePersonnes }"></c:out>
-						
-							<td><c:out value="${reserv.nombreNuitees }"></c:out>
-						
-							<td><c:forEach var="option" items="${$reserv.option }">${option.name }</c:forEach></td>
-							
-							<td><c:out value="${reserv.typeSejour }"></c:out>
-					
-						</tr>
-				</c:forEach>
-			</tbody>	
 
-			</table>
-			<p>
-				<a href="inscription">retour a la page inscription</a>
-		
+		<p class="aligner">Photos Paysage Alpes Maritimes</p>
+		<div class="carousel">
+			<a class="carousel-item" href="#one!"> <img
+				src="images/region/mer.jpg">
+			</a> <a class="carousel-item" href="#two!"> <img
+				src="images/region/montagne.jpg">
+			</a> <a class="carousel-item" href="#three!"> <img
+				src="images/region/mercantour.jpeg">
+			</a> <a class="carousel-item" href="#four!"> <img
+				src="images/region/neige.jpg">
+			</a> <a class="carousel-item" href="#five!"> <img
+				src="images/region/montagne2.jpg">
+			</a>
+
 		</div>
+
+
+
 
 		<footer class="page-footer light-blue darken-1">
 			<div class="container">

@@ -41,14 +41,14 @@
 				<ul class="right hide-on-med-and-down">
 					<li><a href="index.html">Ma Maison</a></li>
 					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription.html">Inscription</a></li>
+					<li><a href="inscription">Inscription</a></li>
+					<li><a href="listeClients">Gestion</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
 					<li><a href="index.html">Ma Maison</a></li>
 					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription.html">Inscription</a></li>
-
-
+					<li><a href="inscription">Inscription</a></li>
+					<li><a href="listeClients">Gestion</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -122,11 +122,11 @@
 					<div class="valign decalage col s12 l4 m4 ">
 
 						<p>
-							<input class="with-gap" name="loisir" type="radio" id="test2" />
+							<input class="with-gap" name="Typesejour" type="radio" id="test2" value="Loisir" />
 							<label for="test2">Loisir</label>
 						</p>
 						<p>
-							<input class="with-gap" name="professionnel" type="radio" id="test3" />
+							<input class="with-gap" name="Typesejour" type="radio" id="test3" value="Professionnel"/>
 							<label for="test3">Professionnel</label>
 						</p>
 					</div>
@@ -161,7 +161,7 @@
 					<div class="input-field col s12 m4 s4">
 						<select name="departements" id="departements"
 							onClick="document.formulaire.codepostal.value=document.formulaire.departements.value;">
-							<option value="" disabled selected>Region</option>
+							<option value="" disabled selected>Departement</option>
 							<option value="0"></option>
 							<option value="01">01 - Ain</option>
 							<option value="02">02 - Aisne</option>
