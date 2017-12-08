@@ -29,51 +29,31 @@
 				</div>
 			</div>
 			<!-- <div class="banniere row">
-            <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
-    </div> -->
+                <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
+        </div> -->
 		</header>
-		<nav>
-			<div class="nav-wrapper light-blue darken-1">
-				<a href="http://www.vence.fr/" class="brand-logo"> <img
-					src="images/logo2.jpg" id="logo" />
-				</a> <a href="#" data-activates="mobile-demo" class="button-collapse">
-					<i class="material-icons">menu</i>
-				</a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="index.html">Ma Maison</a></li>
-					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription">Inscription</a></li>
-					<li><a href="listeClients">Gestion</a></li>
-				</ul>
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="index.html">Ma Maison</a></li>
-					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription">Inscription</a></li>
-					<li><a href="listeClients">Gestion</a></li>
+		
+		<c:import url="inc/menu.jsp"></c:import>
+
+		<div class="container">
+			<div class="slider">
+				<ul class="slides">
+					<li><img src="images/maison/vue.jpg">
+						<div class="caption center-align">
+							<h3>Vue Cap Ferrat</h3>
+
+						</div></li>
+					<li><img src="images/maison/jardin.jpg"> <!-- random image -->
+						<div class="caption left-align"></div></li>
+					<li><img src="images/maison/vuemaison.jpg"> <!-- random image -->
+						<div class="caption right-align"></div></li>
+					<li><img src="images/maison/salon.jpg"> <!-- random image -->
+						<div class="caption center-align"></div></li>
 				</ul>
 			</div>
-		</nav>
 
-
-
-		<p class="aligner">Photos Paysage Alpes Maritimes</p>
-		<div class="carousel">
-			<a class="carousel-item" href="#one!"> <img
-				src="images/region/mer.jpg">
-			</a> <a class="carousel-item" href="#two!"> <img
-				src="images/region/montagne.jpg">
-			</a> <a class="carousel-item" href="#three!"> <img
-				src="images/region/mercantour.jpeg">
-			</a> <a class="carousel-item" href="#four!"> <img
-				src="images/region/neige.jpg">
-			</a> <a class="carousel-item" href="#five!"> <img
-				src="images/region/montagne2.jpg">
-			</a>
 
 		</div>
-
-
-
 
 		<footer class="page-footer light-blue darken-1">
 			<div class="container">

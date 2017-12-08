@@ -33,67 +33,56 @@
                 <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
         </div> -->
 		</header>
-		<nav>
-			<div class="nav-wrapper light-blue darken-1">
-				<a href="http://www.vence.fr/" class="brand-logo"> <img
-					src="images/logo2.jpg" id="logo" />
-				</a> <a href="#" data-activates="mobile-demo" class="button-collapse">
-					<i class="material-icons">menu</i>
-				</a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="index.html">Ma Maison</a></li>
-					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription">Inscription</a></li>
-					<li><a href="listeClients">Gestion</a></li>
-				</ul>
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="index.html">Ma Maison</a></li>
-					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription">Inscription</a></li>
-					<li><a href="listeClients">Gestion</a></li>
-				</ul>
-			</div>
-		</nav>
+
+		<c:import url="inc/menu.jsp"></c:import>
 
 		<div class="container">
-			<table border=1 class="responsive-table">
-				<thead>
-					<tr>
-						<th>Nom</th>
-						<th>Prenom</th>
-						<th>Email</th>
-						<th>Telephone</th>
-						<th>nombre Personnes</th>
-						<th>nombre Nuitées</th>
-						<th>Options</th>
-						<th>Type Sejour</th>
-					</tr>
-				</thead>
+			<c:choose>
+				<c:when test="${acces }">
 
-				<tbody>
-					<c:forEach var="reserv" items="${admin.listeReservations}">
-						<tr>
-							<td><c:out value="${reserv.client.nom }"></c:out><td><c:out value="${reserv.client.prenom }"></c:out><td><c:out value="${reserv.client.telephone }"></c:out>
-						
-							<td><c:out value="${reserv.client.email }"></c:out>
-						
-							<td><c:out value="${reserv.nombrePersonnes }"></c:out>
-						
-							<td><c:out value="${reserv.nombreNuitees }"></c:out>
-						
-							<td><c:forEach var="option" items="${$reserv.option }">${option.name }</c:forEach></td>
-							
-							<td><c:out value="${reserv.typeSejour }"></c:out>
-					
-						</tr>
-				</c:forEach>
-			</tbody>	
+					<table border=1 class="responsive-table">
+						<thead>
+							<tr>
+								<th>Nom</th>
+								<th>Prenom</th>
+								<th>Email</th>
+								<th>Telephone</th>
+								<th>nombre Personnes</th>
+								<th>nombre Nuitées</th>
+								<th>Options</th>
+								<th>Type Sejour</th>
+							</tr>
+						</thead>
 
-			</table>
+						<tbody>
+							<c:forEach var="reserv" items="${admin.listeReservations}">
+								<tr>
+									<td><c:out value="${reserv.client.nom }"></c:out>
+									<td><c:out value="${reserv.client.prenom }"></c:out>
+									<td><c:out value="${reserv.client.telephone }"></c:out>
+									<td><c:out value="${reserv.client.email }"></c:out>
+									<td><c:out value="${reserv.nombrePersonnes }"></c:out>
+									<td><c:out value="${reserv.nombreNuitees }"></c:out>
+									<td><c:forEach var="option" items="${$reserv.option }">${option.name }</c:forEach></td>
+
+									<td><c:out value="${reserv.typeSejour }" /></td>
+								</tr>
+							</c:forEach>
+						</tbody>
+
+					</table>
+				</c:when>
+				<c:otherwise>
+					<span class="interdit">Vous n'avez pas acces a cette page</span>
+				</c:otherwise>
+			</c:choose>
 			<p>
 				<a href="inscription">retour a la page inscription</a>
-		
+			</p>
+
 		</div>
+
+
 
 		<footer class="page-footer light-blue darken-1">
 			<div class="container">

@@ -31,32 +31,11 @@
                 <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
         </div> -->
 		</header>
-		<nav>
-			<div class="nav-wrapper light-blue darken-1">
-				<a href="http://www.vence.fr/" class="brand-logo"> <img
-					src="images/logo2.jpg" id="logo" />
-				</a> <a href="#" data-activates="mobile-demo" class="button-collapse">
-					<i class="material-icons">menu</i>
-				</a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="index.html">Ma Maison</a></li>
-					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription">Inscription</a></li>
-					<li><a href="listeClients">Gestion</a></li>
-				</ul>
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="index.html">Ma Maison</a></li>
-					<li><a href="maregion.html">Ma Region</a></li>
-					<li><a href="inscription">Inscription</a></li>
-					<li><a href="listeClients">Gestion</a></li>
-				</ul>
-			</div>
-		</nav>
-
-
+		
+		<c:import url="inc/menu.jsp"></c:import>
 
 		<div class="container">
-			<h5>Voici un recapitulatif de votre reservation : </h5>
+			<h5>Voici un recapitulatif de votre reservation :</h5>
 			<p>Nom :</p>
 			<c:out value="${reservation.client.nom }"></c:out>
 			<p>Prenom :</p>
