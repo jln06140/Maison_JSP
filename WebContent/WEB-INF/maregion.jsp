@@ -7,9 +7,9 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"
+<link type="text/css" rel="stylesheet" href="./css/materialize.min.css"
 	media="screen,projection" />
-<link type="text/css" rel="stylesheet" href="style/style.css" />
+<link type="text/css" rel="stylesheet" href="./css/style.css" />
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,12 +25,9 @@
 		<header>
 			<div class="parallax-container">
 				<div class="parallax">
-					<img src="images/banniere.jpg">
+					<img src="./images/banniere.jpg">
 				</div>
 			</div>
-			<!-- <div class="banniere row">
-            <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
-    </div> -->
 		</header>
 
 		<c:import url="inc/menu.jsp"></c:import>
@@ -38,15 +35,15 @@
 		<p class="aligner">Photos Paysage Alpes Maritimes</p>
 		<div class="carousel">
 			<a class="carousel-item" href="#one!"> <img
-				src="./images/region/mer.jpg">
+				src="./images/region/mer.jpg"/>
 			</a> <a class="carousel-item" href="#two!"> <img
-				src="images/region/montagne.jpg">
+				src="./images/region/montagne.jpg"/>
 			</a> <a class="carousel-item" href="#three!"> <img
-				src="images/region/mercantour.jpeg">
+				src="./images/region/mercantour.jpeg"/>
 			</a> <a class="carousel-item" href="#four!"> <img
-				src="images/region/neige.jpg">
+				src="./images/region/neige.jpg"/>
 			</a> <a class="carousel-item" href="#five!"> <img
-				src="images/region/montagne2.jpg">
+				src="./images/region/montagne2.jpg"/>
 			</a>
 
 		</div>

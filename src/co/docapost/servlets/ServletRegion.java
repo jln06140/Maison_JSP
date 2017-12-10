@@ -8,18 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class accueil
+ * Servlet implementation class region
  */
-@WebServlet("/")
-public class accueil extends HttpServlet {
+@WebServlet("/region")
+public class ServletRegion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String VUE =  "/WEB-INF/index.jsp";  
+	private static final String VUE =  "/WEB-INF/maregion.jsp";
 	
-	
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public accueil() {
+    public ServletRegion() {
         super();
         // TODO Auto-generated constructor stub
     }

@@ -15,14 +15,15 @@ import co.docapost.forms.InscriptionForm;
  * Servlet implementation class inscription
  */
 @WebServlet("/inscription")
-public class inscription extends HttpServlet {
+public class ServletInscription extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private static final String VUE_ERREUR =  "/WEB-INF/inscription.jsp";
 	private static final String VUE_SUCCESS =  "/WEB-INF/InscriptionValidee.jsp";
-	private static final String ATT_CLIENT = "client";
+	private static final String ATT_FORM = "formulaire";
 	private static final String ATT_RESERVATION = "reservation";
 	private static final String ATT_ADMIN = "admin";
+	
 	
 	
 	
@@ -31,7 +32,7 @@ public class inscription extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public inscription() {
+    public ServletInscription() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -56,6 +57,7 @@ public class inscription extends HttpServlet {
 		
 		
 		request.setAttribute(ATT_RESERVATION, reservation);
+		request.setAttribute(ATT_FORM, form);
 		request.setAttribute(ATT_ADMIN, Admin.getInstance());
 		
 		if (form.getErreurs().isEmpty()) {

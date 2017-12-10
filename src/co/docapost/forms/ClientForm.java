@@ -53,7 +53,7 @@ public class ClientForm {
 		
 		
 		try {
-			validationNom(prenom);
+			validationPrenom(prenom);
 		}catch(Exception e) {
 			SetErreur(CHAMP_PRENOM, e.getMessage());
 		}
@@ -61,7 +61,7 @@ public class ClientForm {
 		
 		
 		try {
-			validationNom(email);
+			validationEmail(email);
 		}catch(Exception e) {
 			SetErreur(CHAMP_EMAIL, e.getMessage());
 		}
@@ -69,14 +69,14 @@ public class ClientForm {
 		
 		
 		try {
-			validationNom(telephone);
+			validationTelephone(telephone);
 		}catch(Exception e) {
 			SetErreur(CHAMP_TELEPHONE, e.getMessage());
 		}
 		client.setTelephone(telephone);
 		
 		try {
-			validationNom(departement);
+			validationDepartement(departement);
 		}catch(Exception e) {
 			SetErreur(CHAMP_DEPARTEMENT, e.getMessage());
 		}

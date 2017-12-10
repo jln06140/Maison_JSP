@@ -1,22 +1,15 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"
-	media="screen,projection" />
-<link type="text/css" rel="stylesheet" href="style/style.css" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-</head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
 
 <body>
 	<div class="contenu">
@@ -27,17 +20,16 @@
 					<img src="images/banniere.jpg">
 				</div>
 			</div>
-			<!-- <div class="banniere row">
-                <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
-        </div> -->
 		</header>
 		
 		<c:import url="inc/menu.jsp"></c:import>
 
 		<div class="container">
 		
-			<div id="erreur" class="erreurCache">
-			
+			<div class="erreur" ><!-- id="erreur" class="erreurCache erreur" -->
+				<c:forEach var="message" items="${formulaire.erreurs }">
+					${message.key } : ${message.value }</br>
+				</c:forEach>
 			</div>
 			<!-- <fieldset> -->
 			<form class="col s12" method="POST" id="formulaire" name="formulaire"
@@ -45,7 +37,7 @@
 				<div class="row">
 					<div class="input-field col s12 m6 l6">
 						<i class="material-icons prefix">account_box</i> <input
-							id="icon_prefix" type="text"" name="nom"> <label for="icon_prefix">Nom
+							id="icon_prefix" type="text" name="nom"> <label for="icon_prefix">Nom
 							: </label>
 						 <!-- <input type="text" id="nom" name="nom" value="" /> -->
 					</div>
@@ -254,7 +246,7 @@
 				<div id="lesbouttons" class="row">
 					<div id="estimer" class="bouton col S16 m5 l5">
 						<button id="estimation" onclick="calculPrix();return false"
-							; class="btn waves-effect waves-light" type="submit"
+							 class="btn waves-effect waves-light" type="submit"
 							name="action">Estimer</button>
 					</div>
 					<div class="col s6 m2 l2">

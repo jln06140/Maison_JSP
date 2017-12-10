@@ -2,17 +2,17 @@
 <html lang="fr">
 
 <head>
-	<title>toto</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Content-Language" content="fr">
-	
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-		rel="stylesheet" />
-	<link type="text/css" rel="stylesheet" href="./css/materialize.css"
-		media="screen,projection" />
-	<link type="text/css" rel="stylesheet" href="./css/style.css" />
+<title>toto</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fr">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="./css/materialize.css"
+	media="screen,projection" />
+<link type="text/css" rel="stylesheet" href="./css/style.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 </head>
@@ -27,7 +27,7 @@
 		<header>
 			<div class="parallax-container">
 				<div class="parallax">
-					<img src="images/banniere.jpg"/>
+					<img src="images/banniere.jpg" />
 				</div>
 			</div>
 			<!-- <div class="banniere row">
@@ -36,27 +36,34 @@
 		</header>
 
 		<c:import url="inc/menu.jsp"></c:import>
-
-		<div class="container">
-			<div class="slider">
-				<ul class="slides">
-					<li><img src="images/maison/vue.jpg"/>
-						<div class="caption center-align">
-							<h3>Vue Cap Ferrat</h3>
-
-						</div></li>
-					<li><img src="images/maison/jardin.jpg"/> <!-- random image -->
-						<div class="caption left-align"></div></li>
-					<li><img src="images/maison/vuemaison.jpg"/> <!-- random image -->
-						<div class="caption right-align"></div></li>
-					<li><img src="images/maison/salon.jpg"/> <!-- random image -->
-						<div class="caption center-align"></div></li>
-				</ul>
-			</div>
-
-
+		<div class="row s4 offset-s4">
+			<span class="erreur col s4 offset-s4"><c:out value="${message }"></c:out></span>
 		</div>
+		<div class="row">
+			<form method ="POST" class="col s4 offset-s4" action="Connexion"
+						name="formConnexion">
+				<div class="row">
+					<div class="input-field col s12" >
+						<input placeholder="Placeholder" id="login" name="login"
+							type="text" class="pass"> <label for="login">Login</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="pass" type="password" name="pass" class="pass">
+						<label for="pass">Mot de Passe</label>
+					</div>
+				</div>
+				<div id="lesbouttons" class="row">
 
+					<div id="connexion" class="bouton col s4 offset-s4">
+						<button id="reserver" class="btn waves-effect waves-light"
+							type="submit" name="action">
+							connexion <i class="material-icons right">send</i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
 		<footer class="page-footer light-blue darken-1">
 			<div class="container">
 				<div class="row">

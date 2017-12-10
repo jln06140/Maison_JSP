@@ -10,7 +10,7 @@
 <!--Import materialize.css-->
 <link type="text/css" rel="stylesheet" href="css/materialize.min.css"
 	media="screen,projection" />
-<link type="text/css" rel="stylesheet" href="style/style.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -29,56 +29,65 @@
 					<img src="images/banniere.jpg">
 				</div>
 			</div>
-			<!-- <div class="banniere row">
-                <div class="col s12 m12"><span class="blue-text text-darken-2 ">Bienvenue Dans Les Alpes Maritimes</span></div>
-        </div> -->
 		</header>
 
 		<c:import url="inc/menu.jsp"></c:import>
 
 		<div class="container">
+<%-- 		
+		<!-- Si utilistateur admin non connecté a alors formulaire de connexion -->
 			<c:choose>
-				<c:when test="${acces }">
-
-					<table border=1 class="responsive-table">
-						<thead>
-							<tr>
-								<th>Nom</th>
-								<th>Prenom</th>
-								<th>Email</th>
-								<th>Telephone</th>
-								<th>nombre Personnes</th>
-								<th>nombre Nuitées</th>
-								<th>Options</th>
-								<th>Type Sejour</th>
-							</tr>
-						</thead>
-
-						<tbody>
-							<c:forEach var="reserv" items="${admin.listeReservations}">
-								<tr>
-									<td><c:out value="${reserv.client.nom }"></c:out>
-									<td><c:out value="${reserv.client.prenom }"></c:out>
-									<td><c:out value="${reserv.client.telephone }"></c:out>
-									<td><c:out value="${reserv.client.email }"></c:out>
-									<td><c:out value="${reserv.nombrePersonnes }"></c:out>
-									<td><c:out value="${reserv.nombreNuitees }"></c:out>
-									<td><c:forEach var="option" items="${$reserv.option }">${option.name }</c:forEach></td>
-
-									<td><c:out value="${reserv.typeSejour }" /></td>
-								</tr>
-							</c:forEach>
-						</tbody>
-
-					</table>
+				<c:when test="${!estConnecte}">
+					<c:import url="inc/connexion.jsp"></c:import>
 				</c:when>
-				<c:otherwise>
-					<span class="interdit">Vous n'avez pas acces a cette page</span>
-				</c:otherwise>
-			</c:choose>
+
+				<c:otherwise> --%>
+
+	    <!-- Si utilistateur admin identifié et connecté  -->
+					<c:choose>
+						<c:when test="${acces }">
+
+							<table border=1 class="responsive-table bordered">
+								<thead>
+									<tr>
+										<th>Nom</th>
+										<th>Prenom</th>
+										<th>Email</th>
+										<th>Telephone</th>
+										<th>nombre Personnes</th>
+										<th>nombre Nuitées</th>
+										<th>Options</th>
+										<th>Type Sejour</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<c:forEach var="reserv" items="${admin.listeReservations}">
+										<tr>
+											<td><c:out value="${reserv.client.nom }"></c:out>
+											<td><c:out value="${reserv.client.prenom }"></c:out>
+											<td><c:out value="${reserv.client.telephone }"></c:out>
+											<td><c:out value="${reserv.client.email }"></c:out>
+											<td><c:out value="${reserv.nombrePersonnes }"></c:out>
+											<td><c:out value="${reserv.nombreNuitees }"></c:out>
+											<td><c:forEach var="option" items="${$reserv.option }">${option.name }</c:forEach></td>
+
+											<td><c:out value="${reserv.typeSejour }" /></td>
+										</tr>
+									</c:forEach>
+								</tbody>
+
+							</table>
+						</c:when>
+						<c:otherwise>
+							<span class="interdit">Vous n'avez pas acces a cette page</span>
+						</c:otherwise>
+					</c:choose>
+			
 			<p>
 				<a href="inscription">retour a la page inscription</a>
 			</p>
+			<span><a href="listeClients?deco=true">Se deconnecter</a></span>
 
 		</div>
 

@@ -1,10 +1,11 @@
-.container{
-    margin-top: 50px;
+.container
+{
+       margin-top: 80px !important;
 }
 
 .banniere
 {
-    background-image: url("../images/banniere.jpg");
+    background-image: url("images/banniere.jpg");
     background-repeat: no-repeat;
     background-size:100% 400px ;
     height:300px;
@@ -60,3 +61,9 @@
 {
 	border-collapse: collapse;
 }
+
+.erreur
+{
+	color:red;
+}
+
