@@ -84,11 +84,11 @@
 						</c:otherwise>
 					</c:choose>
 			
-			<p>
-				<a href="inscription">retour a la page inscription</a>
-			</p>
-			<span><a href="listeClients?deco=true">Se deconnecter</a></span>
-
+			<div class = "row center">
+				<a class="waves-effect waves-light btn" href="inscription">retour a la page inscription</a>
+		
+			<a class="waves-effect waves-light btn" href="listeClients?deco=true">Se deconnecter</a>
+			</div>
 		</div>
 
 

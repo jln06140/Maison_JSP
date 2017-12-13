@@ -14,7 +14,7 @@ import co.docapost.beans.Admin;
  * Servlet implementation class ConnexionServlet
  */
 @WebServlet("/Connexion")
-public class ConnexionServlet extends HttpServlet {
+public class ServletConnexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	//private static final String VUE_CONNECT = "/WEB-INF/listeClients.jsp";
 	private static final String VUE_NON_CONNECT = "/WEB-INF/connexion.jsp";
@@ -22,7 +22,7 @@ public class ConnexionServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ConnexionServlet() {
+    public ServletConnexion() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,6 +31,8 @@ public class ConnexionServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//verification si admin connecté lors du chargement de la page
+		
 		HttpSession session = request.getSession();
 		String user = (String) session.getAttribute("user");
 		

@@ -123,12 +123,14 @@ public class ClientForm {
 	}
 	
 	public void validationTelephone(String telephone) throws Exception {
-		if(telephone != null && !telephone.matches( "^\\d+$" )) {
-			throw new Exception("Format telephone non valide");
-		}
-		else {
+		if(telephone == null ) {
 			throw new Exception("Merci de saisir un numero de telephone");
 		}
+		if(telephone != null && !telephone.matches( "^\\d+$" )) {
+				throw new Exception("Format telephone non valide");
+			
+		}
+		
 	}
 	
 	public void validationDepartement(String departement) throws Exception {

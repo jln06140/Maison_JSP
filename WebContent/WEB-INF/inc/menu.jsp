@@ -8,13 +8,13 @@
 		<ul class="right hide-on-med-and-down">
 			<li><a href="index">Ma Maison</a></li>
 			<li><a href="region">Ma Region</a></li>
-			<li><a href="inscription">Reservation</a></li>
+			<li><a href="reservation">Reservation</a></li>
 			<li><a href="<c:url value="listeClients"/>">Gestion</a></li>
 		</ul>
 		<ul class="side-nav" id="mobile-demo">
 			<li><a href="index">Ma Maison</a></li>
 			<li><a href="region">Ma Region</a></li>
-			<li><a href="inscription">Reservation</a></li>
+			<li><a href="reservation">Reservation</a></li>
 			<li><a href="<c:url value="listeClients"/>">Gestion</a></li>
 		</ul>
 	</div>

@@ -24,6 +24,20 @@
     font-size: 40px;
 }
 
+fieldset
+{
+	border:2px solid #429EA6;
+    border-radius:15px;
+    padding:25px;
+    margin-top:50px;
+    margin-bottom:40px;
+}
+
+fieldset input
+{
+	margin-bottom:50px;
+}
+
 
 
 .erreurCache
